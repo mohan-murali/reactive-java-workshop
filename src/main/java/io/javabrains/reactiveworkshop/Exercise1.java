@@ -24,12 +24,11 @@ public class Exercise1 {
         //  Print the first number in intNumbersStream that's greater than 5.
         //  If nothing is found, print -1
         // TODO: Write code here
-//        var number = StreamSources.intNumbersStream().filter(x -> x > 5).findFirst();
-//        if (number.isPresent()) {
-//            System.out.println(number.get());
-//        } else {
-//            System.out.println(-1);
-//        }
+        var number = StreamSources.intNumbersStream()
+                .filter(x -> x > 5)
+                .findFirst()
+                .orElse(-1);
+        System.out.println(number);
 
         // Print first names of all users in userStream
         // TODO: Write code here
