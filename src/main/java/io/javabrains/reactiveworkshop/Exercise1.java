@@ -16,7 +16,10 @@ public class Exercise1 {
 
         // Print the second and third numbers in intNumbersStream that's greater than 5
         // TODO: Write code here
-//        StreamSources.intNumbersStream().filter(x -> x > 5).limit(2).forEach(x -> System.out.println(x));
+        StreamSources.intNumbersStream()
+                .filter(x -> x > 5)
+                .skip(1)
+                .limit(2).forEach(x -> System.out.println(x));
 
         //  Print the first number in intNumbersStream that's greater than 5.
         //  If nothing is found, print -1
